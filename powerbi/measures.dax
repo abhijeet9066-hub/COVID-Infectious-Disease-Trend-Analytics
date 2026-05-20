@@ -1,0 +1,23 @@
+-- Power BI DAX Measures for COVID Infectious Disease Trend Analytics
+
+Total Records = COUNTROWS('powerbi_fact_main')
+
+Distinct Entities = DISTINCTCOUNT('powerbi_fact_main'[id])
+
+Average Value = AVERAGE('powerbi_fact_main'[value])
+
+High Risk Count =
+CALCULATE(
+    [Total Records],
+    'powerbi_fact_main'[target] = 1
+)
+
+High Risk Rate =
+DIVIDE([High Risk Count], [Total Records])
+
+YoY Change =
+VAR CurrentValue = [Total Records]
+VAR PreviousValue =
+    CALCULATE([Total Records], DATEADD('Calendar'[Date], -1, YEAR))
+RETURN
+DIVIDE(CurrentValue - PreviousValue, PreviousValue)

@@ -1,0 +1,6 @@
+project_name: "COVID Infectious Disease Trend Analytics"
+raw_data_path: "data/raw/input.csv"
+processed_data_path: "data/processed/clean_data.csv"
+database_path: "data/processed/project.sqlite"
+target_column: "target"
+notes: "Update raw_data_path and target_column based on the actual public dataset used."
