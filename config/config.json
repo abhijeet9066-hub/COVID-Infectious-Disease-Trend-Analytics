@@ -1,0 +1,11 @@
+{
+  "project": "Global COVID-19 Surveillance Trend Analytics",
+  "fixed_window_start": "2020-01-05",
+  "fixed_window_end": "2025-12-28",
+  "sources": {
+    "weekly_cases": "https://ourworldindata.org/grapher/weekly-covid-cases.csv?v=1&csvType=full&useColumnShortNames=false",
+    "weekly_deaths": "https://ourworldindata.org/grapher/weekly-covid-deaths.csv?v=1&csvType=full&useColumnShortNames=false",
+    "weekly_cases_per_million": "https://ourworldindata.org/grapher/weekly-covid-cases-per-million-people.csv?v=1&csvType=full&useColumnShortNames=false",
+    "weekly_deaths_per_million": "https://ourworldindata.org/grapher/weekly-covid-deaths-per-million-people.csv?v=1&csvType=full&useColumnShortNames=false"
+  }
+}

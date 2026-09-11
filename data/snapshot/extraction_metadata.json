@@ -1,0 +1,42 @@
+{
+  "project": "Global COVID-19 Surveillance Trend Analytics",
+  "source_attribution": "World Health Organization data processed/published by Our World in Data",
+  "retrieved_at_utc": "2026-09-11T07:06:34.818576+00:00",
+  "fixed_window_start": "2020-01-05",
+  "fixed_window_end": "2025-12-28",
+  "sources": {
+    "weekly_cases": {
+      "url": "https://ourworldindata.org/grapher/weekly-covid-cases.csv?v=1&csvType=full&useColumnShortNames=false",
+      "sha256": "b57b19ac0bc520ba8690ba29a9c345d49da730d0a0eea999da03bb1f641c42f3",
+      "downloaded_bytes": 17310460,
+      "detected_value_column": "Weekly cases",
+      "retained_country_date_rows": 71850
+    },
+    "weekly_deaths": {
+      "url": "https://ourworldindata.org/grapher/weekly-covid-deaths.csv?v=1&csvType=full&useColumnShortNames=false",
+      "sha256": "6bdcfbdd28b3031dc95aced63018890a664e7a567bcc10574c8ee451f5a907aa",
+      "downloaded_bytes": 16821107,
+      "detected_value_column": "Weekly deaths",
+      "retained_country_date_rows": 71989
+    },
+    "weekly_cases_per_million": {
+      "url": "https://ourworldindata.org/grapher/weekly-covid-cases-per-million-people.csv?v=1&csvType=full&useColumnShortNames=false",
+      "sha256": "44a5e8587030c11c21d6143e48d45644c3f3a736dc6df0e32f4b6d59a4b86937",
+      "downloaded_bytes": 19276611,
+      "detected_value_column": "Weekly cases per million people",
+      "retained_country_date_rows": 71850
+    },
+    "weekly_deaths_per_million": {
+      "url": "https://ourworldindata.org/grapher/weekly-covid-deaths-per-million-people.csv?v=1&csvType=full&useColumnShortNames=false",
+      "sha256": "741a291996f607d22e6e7416b8e5fbea2766bda99330e97c85ed592d08ee9ebd",
+      "downloaded_bytes": 18372063,
+      "detected_value_column": "Weekly deaths per million people",
+      "retained_country_date_rows": 71989
+    }
+  },
+  "snapshot_rows": 71995,
+  "country_count": 232,
+  "country_filter": "Code matches ^[A-Z]{3}$",
+  "sampling_rule": "Retain Sunday observations only from trailing-7-day OWID indicators",
+  "interpretation": "Confirmed surveillance reporting data. Not all infections or all attributable deaths; not current 2026 conditions."
+}

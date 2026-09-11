@@ -1,0 +1,26 @@
+name: Portfolio CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Rebuild surveillance metrics from committed snapshot
+        run: python src/02_build_metrics.py
+      - name: Rebuild SQLite warehouse
+        run: python src/03_build_sqlite.py
+      - name: Rebuild Power BI extracts
+        run: python src/04_export_powerbi.py
+      - name: Validate repository
+        run: python src/validate_repo.py

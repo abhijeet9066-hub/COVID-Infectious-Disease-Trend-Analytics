@@ -1,0 +1,2 @@
+# Core pipeline uses Python 3 standard library only.
+# No third-party package is required.

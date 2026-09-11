@@ -1,23 +1,26 @@
--- Power BI DAX Measures for COVID Infectious Disease Trend Analytics
+Total Reported Cases =
+SUM(Weekly[weekly_cases])
 
-Total Records = COUNTROWS('powerbi_fact_main')
+Total Reported Deaths =
+SUM(Weekly[weekly_deaths])
 
-Distinct Entities = DISTINCTCOUNT('powerbi_fact_main'[id])
+Average Weekly Cases per Million =
+AVERAGE(Weekly[weekly_cases_per_million])
 
-Average Value = AVERAGE('powerbi_fact_main'[value])
+Average Weekly Deaths per Million =
+AVERAGE(Weekly[weekly_deaths_per_million])
 
-High Risk Count =
-CALCULATE(
-    [Total Records],
-    'powerbi_fact_main'[target] = 1
-)
+Peak Weekly Cases per Million =
+MAX(Weekly[weekly_cases_per_million])
 
-High Risk Rate =
-DIVIDE([High Risk Count], [Total Records])
+Peak Weekly Deaths per Million =
+MAX(Weekly[weekly_deaths_per_million])
 
-YoY Change =
-VAR CurrentValue = [Total Records]
-VAR PreviousValue =
-    CALCULATE([Total Records], DATEADD('Calendar'[Date], -1, YEAR))
-RETURN
-DIVIDE(CurrentValue - PreviousValue, PreviousValue)
+Average 4W Cases per Million =
+AVERAGE(Weekly[cases_4w_avg_per_million])
+
+Countries =
+DISTINCTCOUNT(Weekly[iso_code])
+
+Average Reporting Coverage % =
+AVERAGE(CountrySummary[row_coverage_pct])

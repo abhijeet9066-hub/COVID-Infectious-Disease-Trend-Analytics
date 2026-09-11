@@ -1,0 +1,7 @@
+asset,layer,source_or_derivation,status,notes
+data/snapshot/extraction_metadata.json,snapshot,OWID Grapher CSV endpoints,generated,"Retrieval timestamp, source URLs, hashes and dataset dimensions"
+data/snapshot/weekly_country_covid.csv,snapshot,WHO data processed/published by Our World in Data,generated,"Country-level weekly confirmed cases/deaths and per-million metrics"
+data/processed/weekly_country_trends.csv,processed,src/02_build_metrics.py,generated,"Weekly data plus 4-week moving averages and trend changes"
+data/processed/annual_country_summary.csv,processed,src/02_build_metrics.py,generated,"Country-year reporting summary"
+data/processed/country_period_summary.csv,processed,src/02_build_metrics.py,generated,"Fixed-period country peaks and reporting coverage"
+data/processed/global_covid_analytics.sqlite,warehouse,src/03_build_sqlite.py,generated,"SQLite analytical warehouse"
